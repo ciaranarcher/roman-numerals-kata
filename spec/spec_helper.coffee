@@ -1,2 +1,2 @@
 global.MyApp = {}
-global.MyApp.TestClass = require '../lib/roman'
+global.MyApp.TestClass = require('../lib/roman').TestClass

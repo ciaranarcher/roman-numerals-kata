@@ -1,1 +1,3 @@
-class TestClass
+exports.TestClass = class TestClass
+  myValue: =>
+    100
