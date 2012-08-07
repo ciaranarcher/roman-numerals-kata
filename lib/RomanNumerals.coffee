@@ -43,6 +43,9 @@ class RomanNumerals
           @numerals[remainder] + numerals if remainder > 0
 
       value = remainder
+      
+      if @numerals[value] != undefined
+        return numerals += @numerals[value]
 
       # 5's
       fives = Math.floor(value / 5)
@@ -53,6 +56,7 @@ class RomanNumerals
           @numerals[remainder] + numerals if remainder > 0
 
       value = remainder
+      console.log value
 
       # if value >= 10
       #   value = value % 10

@@ -26,3 +26,9 @@ describe 'RomanNumerals', ->
   # 10 to 100
   it 'XI for 11', ->
     expect(@rn.convert(11)).toBe 'XI'
+  it 'XV for 15', ->
+    expect(@rn.convert(15)).toBe 'XV'
+  it 'XVIII for 18', ->
+    expect(@rn.convert(18)).toBe 'XVIII'
+  it 'XIX for 19', ->
+    expect(@rn.convert(19)).toBe 'XIX'
