@@ -1,6 +1,8 @@
 class RomanNumerals
   numerals: {
     '1'     : 'I',
+    '2'     : 'II',
+    '3'     : 'III',
     '4'     : 'IV',
     '5'     : 'V',
     '9'     : 'IX',
@@ -32,14 +34,34 @@ class RomanNumerals
       return @numerals[value]
     else
 
-      if value >= 10
-        value = value % 10
-        numerals += @numerals[10]
+      # 10's
+      tens = Math.floor(value / 10)
+      remainder = value % 10
+      if tens > 0
+        for i in [1..tens]
+          numerals += @numerals[10]
+          @numerals[remainder] + numerals if remainder > 0
+
+      value = remainder
+
+      # 5's
+      fives = Math.floor(value / 5)
+      remainder = value % 5
+      if fives > 0
+        for i in [1..fives]
+          numerals += @numerals[5]
+          @numerals[remainder] + numerals if remainder > 0
+
+      value = remainder
+
+      # if value >= 10
+      #   value = value % 10
+      #   numerals += @numerals[10]
 
 
-      if value >= 5 
-        value = value % 5
-        numerals += @numerals[5]
+      # if value >= 5 
+      #   value = value % 5
+      #   numerals += @numerals[5]
 
       if value > 0
         numerals += @lowerNums(value)

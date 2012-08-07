@@ -25,4 +25,4 @@ describe 'RomanNumerals', ->
 
   # 10 to 100
   it 'XI for 11', ->
-    expect(@rn.convert(11)).toBe 'IX'
+    expect(@rn.convert(11)).toBe 'XI'
