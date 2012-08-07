@@ -3,6 +3,7 @@ RomanNumerals = require('./../lib/RomanNumerals').RomanNumerals
 describe 'RomanNumerals', ->
   beforeEach ->
     @rn = new RomanNumerals()
+  # 1 to 10
   it 'returns I for 1', ->
     expect(@rn.convert(1)).toBe 'I'
   it 'returns II for 2', ->
@@ -17,3 +18,11 @@ describe 'RomanNumerals', ->
     expect(@rn.convert(6)).toBe 'VI'
   it 'VII for 7', ->
     expect(@rn.convert(7)).toBe 'VII'
+  it 'VIII for 8', ->
+    expect(@rn.convert(8)).toBe 'VIII'
+  it 'IX for 9', ->
+    expect(@rn.convert(9)).toBe 'IX'
+
+  # 10 to 100
+  it 'XI for 11', ->
+    expect(@rn.convert(11)).toBe 'IX'

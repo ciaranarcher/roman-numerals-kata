@@ -22,18 +22,28 @@ class RomanNumerals
     throw 'not a number between 1 and 3'
 
   convert: (value) ->
-    return 'I' if value == 1
-    return 'II' if value == 2
-    return 'III' if value == 3
-
     numerals = ''
+
+    # 1 to 3 are special cases
+    return @lowerNums(value) if value <= 3
+
+    # check if there is a match in the numerals
     if @numerals[value] != undefined
       return @numerals[value]
     else
-      remaining = value % 5
-      numerals += @numerals[5]
-      if remaining > 0
-        numerals += @lowerNums(remaining)
+
+      if value >= 10
+        value = value % 10
+        numerals += @numerals[10]
+
+
+      if value >= 5 
+        value = value % 5
+        numerals += @numerals[5]
+
+      if value > 0
+        numerals += @lowerNums(value)
+
     numerals
 
 
