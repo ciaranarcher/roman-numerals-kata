@@ -34,7 +34,7 @@ class RomanNumerals
       return @numerals[value]
     else
 
-      # 10's
+      # 10's TODO refactor into function
       tens = Math.floor(value / 10)
       remainder = value % 10
       if tens > 0
@@ -44,6 +44,7 @@ class RomanNumerals
 
       value = remainder
       
+      # check we have a full match
       if @numerals[value] != undefined
         return numerals += @numerals[value]
 
