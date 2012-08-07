@@ -15,6 +15,12 @@ class RomanNumerals
     '1000'  : 'M'
   }
 
+  lowerNums: (num) ->
+    return 'I' if num == 1
+    return 'II' if num == 2
+    return 'III' if num == 3
+    throw 'not a number between 1 and 3'
+
   convert: (value) ->
     return 'I' if value == 1
     return 'II' if value == 2
@@ -27,7 +33,7 @@ class RomanNumerals
       remaining = value % 5
       numerals += @numerals[5]
       if remaining > 0
-        numerals += 'I'
+        numerals += @lowerNums(remaining)
     numerals
 
 

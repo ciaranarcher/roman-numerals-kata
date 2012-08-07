@@ -15,3 +15,5 @@ describe 'RomanNumerals', ->
     expect(@rn.convert(5)).toBe 'V'
   it 'VI for 6', ->
     expect(@rn.convert(6)).toBe 'VI'
+  it 'VII for 7', ->
+    expect(@rn.convert(7)).toBe 'VII'
