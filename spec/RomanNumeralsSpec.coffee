@@ -23,7 +23,7 @@ describe 'RomanNumerals', ->
   it 'IX for 9', ->
     expect(@rn.convert(9)).toBe 'IX'
 
-  # 10 to 100
+  # 10 to 30
   it 'XI for 11', ->
     expect(@rn.convert(11)).toBe 'XI'
   it 'XV for 15', ->
@@ -32,3 +32,35 @@ describe 'RomanNumerals', ->
     expect(@rn.convert(18)).toBe 'XVIII'
   it 'XIX for 19', ->
     expect(@rn.convert(19)).toBe 'XIX'
+  it 'XX for 20', ->
+    expect(@rn.convert(20)).toBe 'XX'
+  it 'XXI for 21', ->
+    expect(@rn.convert(21)).toBe 'XXI'
+  it 'XXIV for 24', ->
+    expect(@rn.convert(24)).toBe 'XXIV'
+  it 'XXV for 25', ->
+    expect(@rn.convert(25)).toBe 'XXV'
+  it 'XXVI for 26', ->
+    expect(@rn.convert(26)).toBe 'XXVI'
+
+  # 40 to 60
+  it 'XXXIX for 39', ->
+    expect(@rn.convert(39)).toBe 'XXXIX'
+  it 'XLIX for 49', ->
+    expect(@rn.convert(49)).toBe 'XLIX'
+  it 'L for 50', ->
+    expect(@rn.convert(50)).toBe 'L'
+  it 'LI for 51', ->
+    expect(@rn.convert(51)).toBe 'LI'
+  it 'LX for 60', ->
+    expect(@rn.convert(60)).toBe 'LX'
+
+  # higher!
+  it 'CDXLVIII for 448', ->
+    expect(@rn.convert(448)).toBe 'CDXLVIII'
+  it 'MCMXCIX for 1999', ->
+    expect(@rn.convert(1999)).toBe 'MCMXCIX'
+
+
+
+
