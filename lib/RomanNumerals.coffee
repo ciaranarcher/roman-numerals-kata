@@ -42,9 +42,6 @@ class RomanNumerals
         if @numerals[value] != undefined
           return numerals += @numerals[value]
 
-      if value > 0
-        numerals += @lowerNums(value)
-        
     numerals
 
 exports.RomanNumerals = RomanNumerals
